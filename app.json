@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+    "subpackages": [
+      {
+        "root": "packageA",
+        "pages": [
+          "pages/cat/cat"
+          
+        ]
+      },
+      {
+        "root": "packageB",
+        "name": "pack2",
+        "pages": [
+         "pages/dog/dog"
+        ]
+      }
+    ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}
