@@ -1,0 +1,50 @@
+/* components/course-center/course-center.wxss */
+@import "../../assets/css/main.wxss";
+.course-top{
+  width: 100%;
+  height:180rpx;
+  overflow: hidden;
+  position: fixed;
+  top:0;
+}
+.course-top>.search{
+  width: 90%;
+  height: 60rpx;
+  margin:50rpx auto 20rpx;
+}
+.search>input{
+  width: 460rpx;
+  height: 100%;
+  float: left;
+  background:#fff;
+  border-radius: 5rpx;
+  color:#000;
+}
+.search>button{
+    width:160rpx;
+    margin-left:20rpx;
+    height: 60rpx;
+    float:left;
+    line-height: 60rpx;
+    font-size: 32rpx;
+}
+.innerSearch{
+  font-size: 30rpx;
+  color: #ccc;
+}
+.list{
+  margin-top:180rpx;
+  padding: 20rpx;
+}
+.list>.list-item{
+  width: 100%;
+  height: 140rpx;
+  background-color: #fff;
+  border:1px solid #ccc;
+  margin-bottom: 20rpx;
+}
+.list-item>.item-main{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.164);
+}

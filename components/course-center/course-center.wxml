@@ -1,0 +1,21 @@
+<!--components/course-center/course-center.wxml-->
+<view class="container">
+<view class="course-top backgroundColor">
+      <view class='search' >
+          <input type='text' placeholder='快捷查询' placeholder-class="innerSearch"></input>
+          <button>查询</button>
+      </view>
+</view>
+<view class="list">
+    <view class="list-item">
+          <view class='item-main'>
+            <image class='main-img left' src=""></image> <view class='left'></view>
+          </view>
+          <view class='item-child'></view>
+    </view>
+    <view class="list-item">
+    24142141421
+    </view>
+</view>
+
+</view>

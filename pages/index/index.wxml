@@ -1,21 +1,24 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
 
-  
+<view class="page-item {{currentTab==0?'active':''}}">
+<course-component>
+</course-component>
+</view>
+  <view class="page-item {{currentTab==1?'active':''}}">
+2
+</view>
+<view class="page-item {{currentTab==2?'active':''}}">
+3
+</view>
+<view class="page-item {{currentTab==3?'active':''}}">
+<personal-component>
+</personal-component>
+</view>
   <!-- 下面的两个tab -->
   <view class='bottom-tab'>
-    <view class='tab-item {{currentTab == 0 ? "active" : ""}}' data-current="0"  wx:for="{{bottomArr}}" bindtap='switchTab'>
-      <image src='{{item}}' class='item-img'></image>
+    <view class='tab-item' data-current="{{index}}"  wx:for="{{bottomArr}}"  bindtap='switchTab'>
+      <image src='{{currentTab == index ? item[1] : item[0]}}' class='item-img'></image>
     </view>
 
   </view>

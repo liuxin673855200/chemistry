@@ -4,17 +4,51 @@ const app = getApp()
 
 Page({
   data: {
-        bottomArr:[
-          "../../assets/img/index/1.png",
-          "../../assets/img/index/2.png",
-          "../../assets/img/index/3.png",
-          "../../assets/img/index/4.png",
-        ]
+        indexTitle:[
+          { "title": "学习园地", "backgroundColor":"#3388FF","color":"#ffffff"},
+          { "title": "最新课程", "backgroundColor":"#3388FF","color":"#ffffff"},
+          { "title": "实验中心", "backgroundColor":"#3388FF","color": "#ffffff"},
+      {"title":"个人中心","backgroundColor":"#d3d6d8","color":"#000000" }
+        ],
+        currentTab:0,
+        bottomArr:[[
+          "../../assets/img/index/7.jpg",
+          "../../assets/img/index/4.jpg"
+        ],
+          [
+            "../../assets/img/index/6.jpg",
+            "../../assets/img/index/3.jpg"
+          ],
+          [
+            "../../assets/img/index/5.jpg",
+            "../../assets/img/index/2.jpg"
+          ],
+          [
+            "../../assets/img/index/8.jpg",
+            "../../assets/img/index/1.jpg"
+          ]]
   },
   //事件处理函数
   switchTab(e) {
     console.log(e)
-    this.setData({ currentTab: e.currentTarget.dataset.current });
+    var _this=this;
+    this.setData({ currentTab: e.currentTarget.dataset.current },
+    ()=>{
+      _this.switchTitle(_this.data.currentTab);
+    });
+  },
+  switchTitle(index){
+    let _this=this;
+    wx.setNavigationBarTitle({
+      title: _this.data.indexTitle[index].title,
+    });
+    console.log(_this.data.indexTitle[index].backgroundColor,index)
+    wx.setNavigationBarColor({
+      frontColor: _this.data.indexTitle[index].color,
+      backgroundColor: _this.data.indexTitle[index].backgroundColor,
+      animation:{}
+    })
+    
   },
   onLoad: function () {
     if (app.globalData.userInfo) {

@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+  "course-component": "/components/course-center/course-center",
+    "personal-component":"/components/personal-center/personal-center"
+  }
 }

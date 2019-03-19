@@ -1,0 +1,21 @@
+<view class='personal'>
+
+<view class="person-top">
+    <view class="headImg">
+        <image src="{{personData.imgUrl}}" ></image>
+    </view>
+    <view class='headTitle'>
+        <view class='words' wx:if="{{!isLogin}}">登录/注册</view>
+        <view class='headData' wx:elif="{{isLogin}}">
+              <view class='nickName'>{{personData.nickName}}</view>
+              <view class='phone'>{{personData.phone}}</view>
+        </view>
+    </view>
+</view>
+
+
+  <view class="userinfo">
+12321
+  </view>
+
+</view>
