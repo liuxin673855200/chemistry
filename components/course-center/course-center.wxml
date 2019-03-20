@@ -7,15 +7,24 @@
       </view>
 </view>
 <view class="list">
-    <view class="list-item">
+    <view class="list-item"  bindtap='showList' data-set="0">
           <view class='item-main'>
-            <image class='main-img left' src=""></image> <view class='left'></view>
+            <image class='main-img left' src="../../assets/img/index/headPhoto.JPG"></image> <view class='left title'>人教版高中必修一</view>
+            <image class="arrow right" src="../../assets/img/index/down.png"></image>
           </view>
-          <view class='item-child'></view>
+          <view class='child-list {{showNum==0?"":"hide"}}'> 
+            <view class='child-item' catchtap="handTap">第一章，进入化学世界</view>
+          </view>
     </view>
-    <view class="list-item">
-    24142141421
+    <view class="list-item"  bindtap='showList' data-set="1">
+              <view class='item-main'>
+                <image class='main-img left' src="../../assets/img/index/headPhoto.JPG"></image> <view class='left title'>人教版高中必修一</view>
+                <image class="arrow right" src="../../assets/img/index/down.png"></image>
+              </view>
+              <view class='child-list {{showNum==1?"":"hide"}}'> 
+                <view class='child-item' catchtap="handTap">第一章，进入化学世界</view>
+              </view>
+        </view>
     </view>
-</view>
 
 </view>
