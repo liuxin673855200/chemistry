@@ -1,30 +1,20 @@
 <!--components/course-center/course-center.wxml-->
 <view class="container">
-<view class="course-top backgroundColor">
-      <view class='search' >
-          <input type='text' placeholder='快捷查询' placeholder-class="innerSearch"></input>
-          <button>查询</button>
-      </view>
-</view>
-<view class="list">
-    <view class="list-item"  bindtap='showList' data-set="0">
-          <view class='item-main'>
-            <image class='main-img left' src="../../assets/img/index/headPhoto.JPG"></image> <view class='left title'>人教版高中必修一</view>
-            <image class="arrow right" src="../../assets/img/index/down.png"></image>
-          </view>
-          <view class='child-list {{showNum==0?"":"hide"}}'> 
-            <view class='child-item' catchtap="handTap">第一章，进入化学世界</view>
+    <view class="course-top backgroundColor">
+          <view class='search' >
+              <input type='text' placeholder='快捷查询' placeholder-class="innerSearch"></input>
+              <button>查询</button>
           </view>
     </view>
-    <view class="list-item"  bindtap='showList' data-set="1">
-              <view class='item-main'>
-                <image class='main-img left' src="../../assets/img/index/headPhoto.JPG"></image> <view class='left title'>人教版高中必修一</view>
-                <image class="arrow right" src="../../assets/img/index/down.png"></image>
-              </view>
-              <view class='child-list {{showNum==1?"":"hide"}}'> 
-                <view class='child-item' catchtap="handTap">第一章，进入化学世界</view>
-              </view>
-        </view>
-    </view>
-
+    <view class="list">
+          <view class="list-item"  bindtap='showList' data-set="{{idx}}" wx:for="{{array_list}}"  wx:for-index="idx" wx:for-item="itemName">
+                  <view class='item-main'>
+                    <image class='main-img left' src="{{itemName.imgUrl}}"></image> <view class='left title'>{{itemName.title}}</view>
+                    <image class="arrow right" src="../../assets/img/index/down.png"></image>
+                  </view>
+                  <view class='child-list {{showNum==idx?"":"hide"}}'> 
+                    <view class='child-item' catchtap="handTap" wx:for="{{itemName.chapter_lists}}">{{item.title}}</view>
+                  </view>
+          </view>
+    </view> 
 </view>
